@@ -4,7 +4,7 @@ using Documenter
 DocMeta.setdocmeta!(WienerDiffusionModel, :DocTestSetup, :(using WienerDiffusionModel); recursive=true)
 
 makedocs(;
-    modules=[Wiener],
+    modules=[WienerDiffusionModel],
     authors="Tobias Alfers <tobias@alfers.eu> and contributors",
     repo="https://github.com/t-alfers/WienerDiffusionModel.jl/blob/{commit}{path}#{line}",
     sitename="WienerDiffusionModel.jl",

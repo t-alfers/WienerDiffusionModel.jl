@@ -2,7 +2,7 @@
 CurrentModule = WienerDiffusionModel
 ```
 
-# Wiener
+# WienerDiffusionModel
 
 Documentation for [WienerDiffusionModel](https://github.com/t-alfers/WienerDiffusionModel.jl).
 
