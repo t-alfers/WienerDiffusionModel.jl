@@ -1,6 +1,6 @@
-using Wiener
+using WienerDiffusionModel
 using Test
 
-@testset "Wiener.jl" begin
+@testset "WienerDiffusionModel.jl" begin
     # Write your tests here.
 end

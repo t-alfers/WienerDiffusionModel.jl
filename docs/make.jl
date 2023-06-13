@@ -1,16 +1,16 @@
-using Wiener
+using WienerDiffusionModel
 using Documenter
 
-DocMeta.setdocmeta!(Wiener, :DocTestSetup, :(using Wiener); recursive=true)
+DocMeta.setdocmeta!(WienerDiffusionModel, :DocTestSetup, :(using WienerDiffusionModel); recursive=true)
 
 makedocs(;
     modules=[Wiener],
     authors="Tobias Alfers <tobias@alfers.eu> and contributors",
-    repo="https://github.com/t-alfers/Wiener.jl/blob/{commit}{path}#{line}",
-    sitename="Wiener.jl",
+    repo="https://github.com/t-alfers/WienerDiffusionModel.jl/blob/{commit}{path}#{line}",
+    sitename="WienerDiffusionModel.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://t-alfers.github.io/Wiener.jl",
+        canonical="https://t-alfers.github.io/WienerDiffusionModel.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -20,6 +20,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/t-alfers/Wiener.jl",
+    repo="github.com/t-alfers/WienerDiffusionModel.jl",
     devbranch="main",
 )

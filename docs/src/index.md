@@ -1,14 +1,14 @@
 ```@meta
-CurrentModule = Wiener
+CurrentModule = WienerDiffusionModel
 ```
 
 # Wiener
 
-Documentation for [Wiener](https://github.com/t-alfers/Wiener.jl).
+Documentation for [WienerDiffusionModel](https://github.com/t-alfers/WienerDiffusionModel.jl).
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [Wiener]
+Modules = [WienerDiffusionModel]
 ```
