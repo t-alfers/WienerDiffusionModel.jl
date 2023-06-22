@@ -1,9 +1,10 @@
 # DEPRECATED
 
-As of June 21 2023 the functionality provided by this package has been fully integrated into [SequentialSamplingModels.jl](https://github.com/itsdfish/SequentialSamplingModels.jl). We encourage users to switch to using SequentialSamplingModels.jl for up-to-date functionality and continued support.
+> As of June 21 2023 the functionality provided by this package has been fully integrated into [SequentialSamplingModels.jl](https://github.com/itsdfish/SequentialSamplingModels.jl). We encourage users to switch to using SequentialSamplingModels.jl for up-to-date functionality and continued support.
 
-Please note: This repository is kept available for archival purposes and will not receive further updates or bug fixes.
+**Please note: This repository is kept available for archival purposes and will not receive further updates or bug fixes.**
 
+---
 
 This package provided basic distribution and sampling (rng) functions (pdf, cdf, rand) for the Wiener Diffusion Model without inter-trial variability. It extends on the Distributions.jl API and is highly inspired by the RWiener package in R (Wabersich & Vandekerckhove, 2014). 
 
