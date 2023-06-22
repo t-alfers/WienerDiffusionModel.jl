@@ -1,11 +1,11 @@
-# WienerDiffusionModel.jl
+# DEPRECATED
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://t-alfers.github.io/WienerDiffusionModel.jl/stable/)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://t-alfers.github.io/WienerDiffusionModel.jl/dev/)
-[![Build Status](https://github.com/t-alfers/WienerDiffusionModel.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/t-alfers/WienerDiffusionModel.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/t-alfers/WienerDiffusionModel.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/t-alfers/WienerDiffusionModel.jl)
+As of June 21 2023 the functionality provided by this package has been fully integrated into [SequentialSamplingModels.jl](https://github.com/itsdfish/SequentialSamplingModels.jl). We encourage users to switch to using SequentialSamplingModels.jl for up-to-date functionality and continued support.
 
-This package provide basic distribution and sampling (rng) functions (pdf, cdf, rand) for the Wiener Diffusion Model without inter-trial variability. It extends on the Distributions.jl API and is highly inspired by the RWiener package in R (Wabersich & Vandekerckhove, 2014). 
+Please note: This repository is kept available for archival purposes and will not receive further updates or bug fixes.
+
+
+This package provided basic distribution and sampling (rng) functions (pdf, cdf, rand) for the Wiener Diffusion Model without inter-trial variability. It extends on the Distributions.jl API and is highly inspired by the RWiener package in R (Wabersich & Vandekerckhove, 2014). 
 
 The Wiener diffusion model is a well-established mathematical model extensively used in cognitive science to analyze binary decision-making processes (Ratcliff & McKoon, 2008). This model, also known as the drift-diffusion model, conceptualizes the decision-making process as a stochastic accumulation of evidence over time until a decision threshold is reached (Ratcliff, 1978). Central to the Wiener diffusion model are four primary parameters: 
 
@@ -27,5 +27,5 @@ Future releases will extend this package to incorporate inter-trial variability 
 # References
 
 - Ratcliff, R. (1978). A theory of memory retrieval. *Psychological Review, 85*(2), 59–108. https://doi.org/10.1037/0033-295X.85.2.59
-- Ratcliff, R., & McKoon, G. (2008). The diffusion decision model: Theory and data for two-choice decision tasks. *Neural Computation, 20*, 873–922. https://dooi.org/10.1162/neco.2008.12-06-420
+- Ratcliff, R., & McKoon, G. (2008). The diffusion decision model: Theory and data for two-choice decision tasks. *Neural Computation, 20*, 873–922. https://doi.org/10.1162/neco.2008.12-06-420
 - Wabersich, D., & Vandekerckhove, J. (2014). The RWiener package: An R package providing distribution functions for the Wiener diffusion model. *The R Journal, 6*, 49–56. R package version 1.3-3. https://journal.r-project.org/archive/2014/RJ-2014-005/RJ-2014-005.pdf

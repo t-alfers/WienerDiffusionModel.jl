@@ -127,12 +127,11 @@ function _Fs_lower(d::Wiener{T}, K::Int, t::Real) where {T<:Real}
         S1 += (_exp_pnorm(2*ν*α*k, -sign(ν)*(2*α*k+α*z+ν*(t-τ))/sqt) -
             _exp_pnorm(-2*ν*α*k-2*ν*α*z, sign(ν)*(2*α*k+α*z-ν*(t-τ))/sqt))
         S2 += (_exp_pnorm(-2*ν*α*k, sign(ν)*(2*α*k-α*z-ν*(t-τ))/sqt) - 
-            _exp_pnorm(-2*ν*α*k-2*ν*α*z, -sign(ν)*(2*α*k-α*z-ν*(t-τ))/sqt))
+            _exp_pnorm(2*ν*α*k-2*ν*α*z, -sign(ν)*(2*α*k+α*z-ν*(t-τ))/sqt))
     end
 
-    return _P_upper(ν, α, z) + sign(ν) * (
-        (cdf(Normal(), -sign(ν) * (α*z+ν*(t-τ))/sqt) - _exp_pnorm(-2*ν*α*z, sign(ν) * (α*z-ν*(t-τ)) / sqt))
-    ) + S1 + S2
+    return _P_upper(ν, α, z) + sign(ν) * ((cdf(Normal(), -sign(ν) * (α*z+ν*(t-τ))/sqt) -
+    _exp_pnorm(-2*ν*α*z, sign(ν) * (α*z-ν*(t-τ)) / sqt)) + S1 + S2)
 end
 
 function _Fs0_lower(d::Wiener{T}, K::Int, t::Real) where {T<:Real}
@@ -147,7 +146,9 @@ end
 
 function _K_large(d::Wiener{T}, t::Real; ϵ::Real = 1.0e-12) where {T<:Real}
     (ν, α, τ, z) = params(d)
-    return ceil(Int, max(sqrt(1/(t-τ)) * α/π, sqrt(max(1, -2/(t-τ)*α^2/(π^2) * (log(ϵ*π*(t-τ)/2 * (ν^2 + π^2/(α^2)))) + ν*α*z + ν^2*(t-τ)/2))))
+    sqrtL1 = sqrt(1/(t-τ)) * α/π
+    sqrtL2 = sqrt(max(1, -2/(t-τ)*α^2/(π^2) * (log(ϵ*π*(t-τ)/2 * (ν^2 + π^2/(α^2)))) + ν*α*z + ν^2*(t-τ)/2))
+    return ceil(Int, max(sqrtL1, sqrtL2))
 end
 
 function _K_small(d::Wiener{T}, t::Real; ϵ::Real = 1.0e-12) where {T<:Real}
